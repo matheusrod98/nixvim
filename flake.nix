@@ -10,9 +10,9 @@
   };
 
   outputs = { nixvim, ... }: {
-    homeManagerModules.default = {
+    homeModules.default = {
       imports = [ 
-        nixvim.homeManagerModules.nixvim 
+        nixvim.homeModules.nixvim 
         ./config
       ];
     };
