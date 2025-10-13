@@ -9,8 +9,16 @@
     vim.o.background = "dark"
     require('gruvbox').setup({
       contrast = "hard",
-      transparent_mode = true,
+      transparent_mode = false,
       overrides = {
+		SignColumn = { link = "Normal" },
+		GruvboxGreenSign = { bg = "" },
+		GruvboxOrangeSign = { bg = "" },
+		GruvboxPurpleSign = { bg = "" },
+		GruvboxYellowSign = { bg = "" },
+		GruvboxRedSign = { bg = "" },
+		GruvboxBlueSign = { bg = "" },
+		GruvboxAquaSign = { bg = "" },
         Pmenu = { link = "Normal" },
       },
     })
