@@ -4,7 +4,7 @@
     ./blink.nix
     ./colorscheme.nix
     ./copilot.nix
-    ./git.nix
+    ./fugitive.nix
     ./languages.nix
     ./lsp.nix
     ./mini.nix
