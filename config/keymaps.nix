@@ -65,7 +65,7 @@
     }
     {
       key = "<leader>ic";
-      action = "<cmd>lua vim.lsp.buf.incoming_calls()<cr>";
+      action.__raw = "function() Snacks.picker.lsp_incoming_calls() end";
       mode = "n";
       options = {
         desc = "Incoming Calls";
@@ -74,7 +74,7 @@
     }
     {
       key = "<leader>oc";
-      action = "<cmd>lua vim.lsp.buf.outgoing_calls()<cr>";
+      action.__raw = "function() Snacks.picker.lsp_outgoing_calls() end";
       mode = "n";
       options = {
         desc = "Outgoing Calls";
