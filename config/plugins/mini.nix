@@ -2,6 +2,9 @@
   plugins.mini = {
     enable = true;
     modules = {
+      surround = {
+        enable = true;
+      };
       align = {
         enable = true;
       };
@@ -22,6 +25,17 @@
           line_right = "<M-S-l>";
           line_down = "<M-S-j>";
           line_up = "<M-S-k>";
+        };
+      };
+      diff = {
+        enable = true;
+        view = {
+          style = "sign";
+          signs = {
+            add = "┃";
+            change = "┃";
+            delete = "▁";
+          };
         };
       };
       pairs = {

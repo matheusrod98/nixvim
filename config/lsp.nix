@@ -8,9 +8,31 @@
           INFO = "󰋽";
           HINT = "󰌶";
         };
+        severity_sort = true;
       };
     };
   };
+
+  extraConfigLua = ''
+    local orig_signs_handler = vim.diagnostic.handlers.signs
+    vim.diagnostic.handlers.signs = {
+      show = function(namespace, bufnr, diagnostics, opts)
+        local seen = {}
+        local to_show = {}
+        for _, diag in ipairs(diagnostics) do
+          local key = diag.lnum .. "_" .. diag.severity
+          if not seen[key] then
+            seen[key] = true
+            table.insert(to_show, diag)
+          end
+        end
+        orig_signs_handler.show(namespace, bufnr, to_show, opts)
+      end,
+      hide = function(namespace, bufnr)
+        orig_signs_handler.hide(namespace, bufnr)
+      end,
+    }
+  '';
 
   lsp = {
     servers = {

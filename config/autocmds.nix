@@ -3,6 +3,9 @@
     "kickstart-highlight-yank" = {
       clear = true;
     };
+    "cursor-restore" = {
+      clear = true;
+    };
     "cfilter" = {
       clear = true;
     };
@@ -12,6 +15,18 @@
   };
 
   autoCmd = [
+    {
+      event = "VimEnter";
+      desc = "Set cursor to block in normal mode when entering Neovim";
+      group = "cursor-restore";
+      command = "set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50";
+    }
+    {
+      event = "ExitPre";
+      desc = "Set cursor back to beam when leaving Neovim";
+      group = "cursor-restore";
+      command = "set guicursor=a:ver90";
+    }
     {
       event = "TextYankPost";
       desc = "Highlight when yanking (copying) text";
