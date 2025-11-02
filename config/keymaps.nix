@@ -10,6 +10,15 @@
       };
     }
     {
+      key = "<leader>=";
+      action = "<cmd>lua vim.lsp.buf.format({ async = true })<cr>";
+      mode = "n";
+      options = {
+        desc = "Format buffer";
+        silent = true;
+      };
+    }
+    {
       key = "<leader>rn";
       action = "<cmd>lua vim.lsp.buf.rename()<cr>";
       mode = "n";
@@ -65,7 +74,7 @@
     }
     {
       key = "<leader>ic";
-      action.__raw = "function() Snacks.picker.lsp_incoming_calls() end";
+      action.__raw = "function() vim.lsp.buf.incoming_calls() end";
       mode = "n";
       options = {
         desc = "Incoming Calls";
@@ -74,7 +83,7 @@
     }
     {
       key = "<leader>oc";
-      action.__raw = "function() Snacks.picker.lsp_outgoing_calls() end";
+      action.__raw = "function() vim.lsp.buf.outgoing_calls() end";
       mode = "n";
       options = {
         desc = "Outgoing Calls";

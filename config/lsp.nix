@@ -64,6 +64,9 @@
       marksman = {
         enable = true;
       };
+      postgres_lsp = {
+        enable = true;
+      };
     };
   };
 }

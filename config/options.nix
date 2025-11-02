@@ -25,7 +25,7 @@
     completeopt = "fuzzy,menuone,noinsert,popup";
     foldmethod = "expr";
     foldexpr = "v:lua.vim.treesitter.foldexpr()";
-    foldenable = false;
+    foldlevelstart = 99;
     inccommand = "split";
     ignorecase = true;
     smartcase = true;

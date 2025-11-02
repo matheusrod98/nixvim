@@ -30,6 +30,9 @@
     };
     treesitter-context = {
       enable = true;
+      settings = {
+        separator = "─";
+      };
     };
     treesitter-textobjects = {
       enable = true;
@@ -62,6 +65,15 @@
         use_default_keymaps = false;
         max_join_length = 10000000;
       };
+    };
+  };
+ 
+  highlight = {
+    TreesitterContext = {
+      bg = "none";
+    };
+    TreesitterContextSeparator = {
+      link = "Comment";
     };
   };
 }
