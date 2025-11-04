@@ -74,7 +74,7 @@
     }
     {
       key = "<leader>ic";
-      action.__raw = "function() vim.lsp.buf.incoming_calls() end";
+      action.__raw = "function() Snacks.picker.lsp_incoming_calls() end";
       mode = "n";
       options = {
         desc = "Incoming Calls";
@@ -83,7 +83,7 @@
     }
     {
       key = "<leader>oc";
-      action.__raw = "function() vim.lsp.buf.outgoing_calls() end";
+      action.__raw = "function() Snacks.picker.lsp_outgoing_calls() end";
       mode = "n";
       options = {
         desc = "Outgoing Calls";
