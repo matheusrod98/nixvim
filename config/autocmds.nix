@@ -1,9 +1,6 @@
 {
   autoGroups = {
-    "kickstart-highlight-yank" = {
-      clear = true;
-    };
-    "cursor-restore" = {
+    "highlight-yank" = {
       clear = true;
     };
     "cfilter" = {
@@ -12,26 +9,48 @@
     "lsp" = {
       clear = true;
     };
+    "help-window" = {
+      clear = true;
+    };
+    "window-management" = {
+      clear = true;
+    };
+    "cursorline" = {
+      clear = true;
+    };
   };
 
   autoCmd = [
     {
-      event = "VimEnter";
-      desc = "Set cursor to block in normal mode when entering Neovim";
-      group = "cursor-restore";
-      command = "set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50";
+      event = "FileType";
+      pattern = "help";
+      command = "wincmd L";
+      desc = "Open help in a vertical split on the right";
+      group = "help-window";
     }
     {
-      event = "ExitPre";
-      desc = "Set cursor back to beam when leaving Neovim";
-      group = "cursor-restore";
-      command = "set guicursor=a:ver90";
+      event = "VimResized";
+      command = "wincmd =";
+      desc = "Equalize window sizes after resizing Vim";
+      group = "window-management";
+    }
+    {
+      event = ["WinEnter" "BufEnter"];
+      desc = "Activate cursorline only in the active window";
+      group = "cursorline";
+      callback.__raw = "callback = function() vim.wo.cursorline = true end";
+    }
+    {
+      event = ["WinLeave" "BufLeave"];
+      desc = "Deactivate cursorline in inactive windows";
+      group = "cursorline";
+      callback.__raw = "callback = function() vim.wo.cursorline = false end";
     }
     {
       event = "TextYankPost";
       desc = "Highlight when yanking (copying) text";
-      group = "kickstart-highlight-yank";
-      callback.__raw = "function() vim.hl.on_yank() end";
+      group = "highlight-yank";
+      callback.__raw = "callback = function() vim.highlight.on_yank({ timeout = 200, visual = true }) end})";
     }
     {
       event = "QuickFixCmdPost";
