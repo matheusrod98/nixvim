@@ -6,8 +6,5 @@
     schemastore = {
       enable = true;
     };
-    fidget = {
-      enable = true;
-    };
   };
 }

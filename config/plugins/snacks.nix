@@ -33,6 +33,9 @@
         image = {
           enabled = false;
         };
+        notifier = {
+          enabled = true;
+        };
       };
     };
   };
