@@ -85,19 +85,19 @@
       event = ["WinEnter" "BufEnter"];
       desc = "Activate cursorline only in the active window";
       group = "cursorline";
-      callback.__raw = "callback = function() vim.wo.cursorline = true end";
+      callback.__raw = "function() vim.wo.cursorline = true end";
     }
     {
       event = ["WinLeave" "BufLeave"];
       desc = "Deactivate cursorline in inactive windows";
       group = "cursorline";
-      callback.__raw = "callback = function() vim.wo.cursorline = false end";
+      callback.__raw = "function() vim.wo.cursorline = false end";
     }
     {
       event = "TextYankPost";
       desc = "Highlight when yanking (copying) text";
       group = "highlight-yank";
-      callback.__raw = "callback = function() vim.highlight.on_yank({ timeout = 200, visual = true }) end})";
+      callback.__raw = "function() vim.highlight.on_yank({ timeout = 200, visual = true }) end";
     }
     {
       event = "QuickFixCmdPost";
