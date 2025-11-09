@@ -18,6 +18,9 @@
     "cursorline" = {
       clear = true;
     };
+    "cursor-shape" = {
+      clear = true;
+    };
   };
 
   autoCmd = [
@@ -114,6 +117,17 @@
         end
       end
       ";
+    }
+    {
+      event = "VimLeavePre";
+      desc = "Restore terminal default cursor on exit";
+      group = "cursor-shape";
+      callback.__raw = ''
+        function()
+          vim.opt.guicursor = ""
+          vim.cmd('set guicursor=a:ver25-blinkon1')
+        end
+      '';
     }
   ];
 }
