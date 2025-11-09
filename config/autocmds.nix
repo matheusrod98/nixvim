@@ -82,18 +82,6 @@
       group = "window-management";
     }
     {
-      event = ["WinEnter" "BufEnter"];
-      desc = "Activate cursorline only in the active window";
-      group = "cursorline";
-      callback.__raw = "function() vim.wo.cursorline = true end";
-    }
-    {
-      event = ["WinLeave" "BufLeave"];
-      desc = "Deactivate cursorline in inactive windows";
-      group = "cursorline";
-      callback.__raw = "function() vim.wo.cursorline = false end";
-    }
-    {
       event = "TextYankPost";
       desc = "Highlight when yanking (copying) text";
       group = "highlight-yank";
