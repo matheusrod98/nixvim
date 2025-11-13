@@ -129,5 +129,12 @@
         end
       '';
     }
+    {
+      event = "FileType";
+      pattern = "diff";
+      desc = "Disable folding in diff mode";
+      group = "cursorline";
+      callback.__raw = "function() vim.opt_local.foldenable = false end";
+    }
   ];
 }
