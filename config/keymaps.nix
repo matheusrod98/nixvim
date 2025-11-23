@@ -473,37 +473,10 @@
     }
     {
       mode = "n";
-      key = "<leader>gg";
-      action = "<cmd>tab Git<cr>";
+      key = "<leader>gb";
+      action.__raw = "function() Snacks.gitbrowse() end";
       options = {
-        desc = "Open Fugitive in new tab";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>gcc";
-      action = "<cmd>Git commit -v<cr>";
-      options = {
-        desc = "Git commit";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>gca";
-      action = "<cmd>Git commit --amend<cr>";
-      options = {
-        desc = "Amend last commit";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>gcA";
-      action = "<cmd>Git commit --amend --no-edit<cr>";
-      options = {
-        desc = "Amend last commit";
+        desc = "Open Git repository in browser"; 
         silent = true;
       };
     }
