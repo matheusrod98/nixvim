@@ -4,7 +4,6 @@
     ./blink.nix
     ./colorscheme.nix
     ./copilot.nix
-    ./fugitive.nix
     ./languages.nix
     ./lsp.nix
     ./mini.nix
@@ -13,6 +12,5 @@
     ./snacks.nix
     ./statusline.nix
     ./treesitter.nix
-    ./undotree.nix
   ];
 }

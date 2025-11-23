@@ -344,7 +344,7 @@
     }
     {
       key = "<leader>u";
-      action = "<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>";
+      action = "<cmd>Undotree<cr>";
       mode = "n";
       options = {
         desc = "Toggle Undotree";
