@@ -36,6 +36,15 @@
         notifier = {
           enabled = true;
         };
+        bigfile = {
+          enabled = true;
+        };
+        quickfile = {
+          enabled = true;
+        };
+        bufdelete = {
+          enabled = true;
+        };
       };
     };
   };
