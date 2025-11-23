@@ -45,6 +45,9 @@
         bufdelete = {
           enabled = true;
         };
+        statuscolumn = {
+          enabled = true;
+        };
       };
     };
   };
