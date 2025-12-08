@@ -36,26 +36,28 @@
     };
     treesitter-textobjects = {
       enable = true;
-      select = {
-        enable = true;
-        lookahead = true;
-        keymaps = {
-          "af" = "@function.outer";
-          "if" = "@function.inner";
-          "ac" = "@class.outer";
-          "ic" = "@class.inner";
-          "as" = "@local.scope";
-          "aa" = "@parameter.outer";
-          "ia" = "@parameter.inner";
+      settings = {
+        select = {
+          enable = true;
+          lookahead = true;
+          keymaps = {
+            "af" = "@function.outer";
+            "if" = "@function.inner";
+            "ac" = "@class.outer";
+            "ic" = "@class.inner";
+            "as" = "@local.scope";
+            "aa" = "@parameter.outer";
+            "ia" = "@parameter.inner";
+          };
         };
-      };
-      swap = {
-        enable = true;
-        swapNext = {
-          "gp" = "@parameter.inner";
-        };
-        swapPrevious = {
-          "gP" = "@parameter.inner";
+        swap = {
+          enable = true;
+          swap_next = {
+            "gp" = "@parameter.inner";
+          };
+          swap_previous = {
+            "gP" = "@parameter.inner";
+          };
         };
       };
     };

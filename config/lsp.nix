@@ -16,7 +16,7 @@
     servers = {
       jsonls = {
         enable = true;
-        settings = {
+        config = {
           json = {
             validate = {
               enable = true;
@@ -27,7 +27,7 @@
       };
       yamlls = {
         enable = true;
-        settings = {
+        config = {
           yaml = {
             schemaStore = {
               enable = false;
@@ -48,7 +48,7 @@
       };
       vtsls = {
         enable = true;
-        settings = {
+        config = {
           filetypes = [
             "jsx"
             "js"
