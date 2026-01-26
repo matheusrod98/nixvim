@@ -12,6 +12,5 @@
     ./snacks.nix
     ./statusline.nix
     ./treesitter.nix
-    ./zk.nix
   ];
 }
