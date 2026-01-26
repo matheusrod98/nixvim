@@ -30,7 +30,7 @@
     ignorecase = true;
     smartcase = true;
     confirm = true;
-    diffopt = "vertical,algorithm:histogram,indent-heuristic";
+    diffopt = "vertical,algorithm:histogram,indent-heuristic,linematch:60";
     grepprg = "rg --vimgrep --smart-case --follow --hidden --glob '!.git/'";
     grepformat = "%f:%l:%c:%m";
     showmode = false;
