@@ -4,7 +4,6 @@
     relativenumber = true;
     scrolloff = 10;
     sidescrolloff = 10;
-    signcolumn = "auto:2-5";
     tabstop = 4;
     shiftwidth = 4;
     softtabstop = 4;
