@@ -13,11 +13,6 @@
       settings = {
         picker = {
           enabled = true;
-          icons = {
-            files = {
-              enabled = false;
-            };
-          };
         };
         dashboard = {
           enabled = true;
@@ -31,7 +26,7 @@
           ];
         };
         image = {
-          enabled = false;
+          enabled = true;
         };
         notifier = {
           enabled = true;
@@ -40,12 +35,6 @@
           enabled = true;
         };
         quickfile = {
-          enabled = true;
-        };
-        bufdelete = {
-          enabled = true;
-        };
-        statuscolumn = {
           enabled = true;
         };
       };
