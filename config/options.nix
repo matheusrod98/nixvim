@@ -21,7 +21,7 @@
     wildoptions = "pum,fuzzy";
     wildmode = "longest:full,full";
     pumheight = 8;
-    completeopt = "fuzzy,menuone,popup";
+    completeopt = "fuzzy,menuone,noinsert,popup";
     foldmethod = "expr";
     foldexpr = "v:lua.vim.treesitter.foldexpr()";
     foldlevelstart = 99;
