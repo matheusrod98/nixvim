@@ -90,7 +90,7 @@
     { mode = "n"; key = "<leader>fM"; action.__raw = "function() Snacks.picker.man() end"; options.desc = "Man Pages"; }
     {
       mode = "n";
-      key = "<leader>gb";
+      key = "<leader>gx";
       action.__raw = "function() Snacks.gitbrowse() end";
       options = {
         desc = "Open Git repository in browser"; 
