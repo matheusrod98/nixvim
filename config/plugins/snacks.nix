@@ -37,6 +37,12 @@
         quickfile = {
           enabled = true;
         };
+        bufdelete = {
+          enabled = true;
+        };
+        statuscolumn = {
+          enabled = true;
+        };
       };
     };
   };
