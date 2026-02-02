@@ -4,7 +4,6 @@
     ./blink.nix
     ./colorscheme.nix
     ./copilot.nix
-    ./languages.nix
     ./lsp.nix
     ./mini.nix
     ./oil.nix

@@ -48,12 +48,6 @@
       };
       vtsls = {
         enable = true;
-        config = {
-          filetypes = [
-            "jsx"
-            "js"
-          ];
-        };
       };
       tailwindcss = {
         enable = true;

@@ -20,6 +20,7 @@
       ./autocmds.nix
       ./lsp.nix
       ./plugins
+      ./languages.nix
     ];
 
     nixpkgs.config = {
