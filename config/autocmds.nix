@@ -1,5 +1,5 @@
 {
-  autoGroups = {
+  programs.nixvim.autoGroups = {
     "highlight-yank" = {
       clear = true;
     };
@@ -23,7 +23,7 @@
     };
   };
 
-  autoCmd = [
+  programs.nixvim.autoCmd = [
     {
       event = "LspProgress";
       desc = "Show LSP progress in the notification area";

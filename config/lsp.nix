@@ -1,5 +1,5 @@
 {
-  diagnostic = {
+  programs.nixvim.diagnostic = {
     settings = {
       signs = {
         text = {
@@ -12,7 +12,7 @@
     };
   };
 
-  lsp = {
+  programs.nixvim.lsp = {
     servers = {
       jsonls = {
         enable = true;

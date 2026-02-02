@@ -1,9 +1,9 @@
 {
-  autoGroups.lsp_keybinds = {
+  programs.nixvim.autoGroups.lsp_keybinds = {
     clear = true;
   };
 
-  autoCmd = [
+  programs.nixvim.autoCmd = [
     {
       event = "LspAttach";
       group = "lsp_keybinds";

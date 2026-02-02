@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  programs.nixvim.keymaps = [
     {
       key = "<C-d>";
       action = "<C-d>zz";

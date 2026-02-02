@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  programs.nixvim.keymaps = [
     {
       key = "[t";
       action = "<cmd>tabprevious<cr>";

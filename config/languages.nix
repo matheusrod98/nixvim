@@ -16,7 +16,7 @@ let
   };
 in
 {
-  extraPackages = with pkgs; [
+  programs.nixvim.extraPackages = with pkgs; [
     # Golang
     golines
     go-tools

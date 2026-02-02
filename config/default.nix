@@ -1,6 +1,15 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./options.nix
+    ./keymaps.nix
+    ./autocmds.nix
+    ./lsp.nix
+    ./plugins
+    ./languages.nix
+  ];
+
   programs.nixvim = {
     enable = true;
     vimAlias = true;
@@ -15,14 +24,6 @@
         plugins = true;
       };
     };
-    imports = [
-      ./options.nix
-      ./keymaps.nix
-      ./autocmds.nix
-      ./lsp.nix
-      ./plugins
-      ./languages.nix
-    ];
 
     nixpkgs.config = {
       allowUnfree = true;

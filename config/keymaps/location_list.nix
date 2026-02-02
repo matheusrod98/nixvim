@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  programs.nixvim.keymaps = [
     {
       key = "<leader>L";
       action = ":lua (function() local windows = vim.fn.getwininfo() for _, win in pairs(windows) do if win['loclist'] == 1 then vim.cmd.lclose() return end end vim.cmd.lopen() end)()<cr>";

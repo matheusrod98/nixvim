@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  programs.nixvim.keymaps = [
     {
       key = "<leader>cp";
       action = "<cmd>lua local relative_path = vim.fn.fnamemodify(vim.fn.expand('%'), ':~:.') if relative_path == \"\" then vim.notify(\"No file in current buffer\", vim.log.levels.WARN) return end vim.fn.setreg('+', relative_path) vim.notify(\"Copied to clipboard: \" .. relative_path, vim.log.levels.INFO)<cr>";

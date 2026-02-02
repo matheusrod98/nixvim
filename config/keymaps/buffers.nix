@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  programs.nixvim.keymaps = [
     {
       key = "<leader>w";
       action = "<cmd>update<cr>";

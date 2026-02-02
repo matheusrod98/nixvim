@@ -1,5 +1,5 @@
 {
-  opts = {
+  programs.nixvim.opts = {
     number = true;
     relativenumber = true;
     scrolloff = 10;
@@ -37,11 +37,11 @@
     timeoutlen = 300;
   };
 
-  globals = {
+  programs.nixvim.globals = {
     mapleader = " ";
   };
 
-  extraConfigLua = ''
+  programs.nixvim.extraConfigLua = ''
     function _G.FdFindFiles(cmdarg, _cmdcomplete)
       local fnames = vim.fn.systemlist('fd --type f --hidden --color=never')
       if #cmdarg == 0 then
