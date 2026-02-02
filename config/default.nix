@@ -4,6 +4,7 @@
   programs.nixvim = {
     enable = true;
     vimAlias = true;
+    plugins.lz-n.enable = true;
     performance = {
       byteCompileLua = {
         enable = true;

@@ -30,12 +30,18 @@
     };
     treesitter-context = {
       enable = true;
+      lazyLoad.settings = {
+        event = "BufReadPost";
+      };
       settings = {
         separator = "─";
       };
     };
     treesitter-textobjects = {
       enable = true;
+      lazyLoad.settings = {
+        event = "BufReadPost";
+      };
       settings = {
         select = {
           enable = true;
@@ -63,6 +69,9 @@
     };
     treesj = {
       enable = true;
+      lazyLoad.settings = {
+        cmd = [ "TSJToggle" "TSJSplit" "TSJJoin" ];
+      };
       settings = {
         use_default_keymaps = false;
         max_join_length = 10000000;

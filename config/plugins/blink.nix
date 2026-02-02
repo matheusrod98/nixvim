@@ -1,8 +1,7 @@
 {
-  plugins = {
-    blink-cmp = {
-      enable = true;
-      settings = {
+  plugins.blink-cmp = {
+    enable = true;
+    settings = {
         keymap = {
           preset = "default";
         };
@@ -25,7 +24,6 @@
         signature = {
           enabled = true;
         };
-      };
     };
   };
 }

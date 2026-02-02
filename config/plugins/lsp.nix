@@ -1,10 +1,6 @@
 {
   plugins = {
-    lsp = {
-      enable = true;
-    };
-    schemastore = {
-      enable = true;
-    };
+    lsp.enable = true;
+    schemastore.enable = true;
   };
 }
