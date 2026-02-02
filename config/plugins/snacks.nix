@@ -28,9 +28,6 @@
         image = {
           enabled = true;
         };
-        notifier = {
-          enabled = true;
-        };
         bigfile = {
           enabled = true;
         };
