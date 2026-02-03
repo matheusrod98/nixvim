@@ -6,6 +6,7 @@
     ./keymaps/location_list.nix
     ./keymaps/lsp.nix
     ./keymaps/navigation.nix
+    ./keymaps/oil.nix
     ./keymaps/quickfix_list.nix
     ./keymaps/search.nix
     ./keymaps/snacks.nix
