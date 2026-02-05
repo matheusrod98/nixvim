@@ -14,6 +14,11 @@
         settings = {
           picker = {
             enabled = true;
+            icons = {
+              files = {
+                enabled = false;
+              };
+            };
           };
           dashboard = {
             enabled = true;
