@@ -65,7 +65,7 @@
       };
     };
 
-    highlight = {
+    highlightOverride = {
       TreesitterContext = {
         bg = "none";
       };
