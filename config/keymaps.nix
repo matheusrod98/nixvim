@@ -11,6 +11,7 @@
     ./keymaps/search.nix
     ./keymaps/snacks.nix
     ./keymaps/tabs.nix
+    ./keymaps/undotree.nix
     ./keymaps/window_management.nix
   ];
 }
