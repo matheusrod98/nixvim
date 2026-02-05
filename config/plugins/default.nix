@@ -2,7 +2,7 @@
   imports = [
     ./abolish.nix
     ./blink.nix
-    ./builtin.nix
+    # ./builtin.nix
     ./colorscheme.nix
     ./copilot.nix
     ./lsp.nix
