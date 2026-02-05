@@ -9,25 +9,10 @@
     plugins = {
       treesitter = {
         enable = true;
-        settings = {
-          highlight = {
-            enable = true;
-          };
-          indent = {
-            enable = true;
-          };
-          incremental_selection = {
-            enable = true;
-            keymaps = {
-              init_selection = "<cr>";
-              node_incremental = "<cr>";
-              node_decremental = "<bs>";
-              scope_incremental = "<tab>";
-            };
-          };
-          folding = true;
-          nixvimInjections = true;
-        };
+        folding.enable = true;
+        highlight.enable = true;
+        indent.enable = true;
+        nixvimInjections = true;
       };
       treesitter-context = {
         enable = true;
