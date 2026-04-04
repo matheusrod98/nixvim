@@ -20,8 +20,10 @@
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
     wildmode = "longest:full,full";
+    autocomplete = true;
     pumheight = 8;
-    completeopt = "fuzzy,menuone,noinsert,popup";
+    complete = ".,w,b,u,t,o";
+    completeopt = "fuzzy,menuone,noselect,popup";
     foldmethod = "expr";
     foldexpr = "v:lua.vim.treesitter.foldexpr()";
     foldlevelstart = 99;

@@ -1,13 +1,12 @@
 {
   imports = [
     ./abolish.nix
-    ./blink.nix
     # ./builtin.nix
     ./colorscheme.nix
-    ./copilot.nix
     ./lsp.nix
     ./mini.nix
     ./oil.nix
+    ./sidekick.nix
     ./sleuth.nix
     ./snacks.nix
     ./statusline.nix

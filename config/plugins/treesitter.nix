@@ -13,21 +13,26 @@
         highlight.enable = true;
         indent.enable = true;
         nixvimInjections = true;
+        settings = {
+          incremental_selection = {
+            enable = true;
+            keymaps = {
+              init_selection = "<Tab>";
+              node_incremental = "<Tab>";
+              scope_incremental = "<S-Tab>";
+              node_decremental = "<BS>";
+            };
+          };
+        };
       };
       treesitter-context = {
         enable = true;
-        lazyLoad.settings = {
-          event = "BufReadPost";
-        };
         settings = {
           separator = "─";
         };
       };
       treesitter-textobjects = {
         enable = true;
-        lazyLoad.settings = {
-          event = "BufReadPost";
-        };
         settings = {
           select = {
             enable = true;
@@ -55,9 +60,6 @@
       };
       treesj = {
         enable = true;
-        lazyLoad.settings = {
-          cmd = [ "TSJToggle" "TSJSplit" "TSJJoin" ];
-        };
         settings = {
           use_default_keymaps = false;
           max_join_length = 10000000;
@@ -67,6 +69,15 @@
 
     highlightOverride = {
       TreesitterContext = {
+        bg = "none";
+      };
+      TreesitterContextLineNumber = {
+        bg = "none";
+      };
+      TreesitterContextBottom = {
+        bg = "none";
+      };
+      TreesitterContextLineNumberBottom = {
         bg = "none";
       };
       TreesitterContextSeparator = {

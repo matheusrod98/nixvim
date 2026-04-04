@@ -58,6 +58,9 @@
       marksman = {
         enable = true;
       };
+      copilot = {
+        enable = true;
+      };
     };
   };
 }

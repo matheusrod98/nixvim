@@ -9,6 +9,7 @@
     ./keymaps/oil.nix
     ./keymaps/quickfix_list.nix
     ./keymaps/search.nix
+    ./keymaps/sidekick.nix
     ./keymaps/snacks.nix
     ./keymaps/tabs.nix
     ./keymaps/undotree.nix
