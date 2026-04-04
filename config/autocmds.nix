@@ -1,15 +1,6 @@
 {
   programs.nixvim.autoCmd = [
     {
-      event = [
-        "LspProgress"
-        "Progress"
-        "DiagnosticChanged"
-      ];
-      desc = "Redraw statusline on LSP progress";
-      command = "redrawstatus";
-    }
-    {
       event = "User";
       pattern = "MiniDiffUpdated";
       desc = "Redraw statusline on mini diff updates";
