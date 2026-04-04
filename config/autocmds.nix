@@ -23,7 +23,7 @@
     {
       event = "TextYankPost";
       desc = "Highlight when yanking (copying) text";
-      callback.__raw = "function() vim.highlight.on_yank({ timeout = 200, visual = true }) end";
+      callback.__raw = "function() vim.hl.on_yank({ timeout = 200 }) end";
     }
     {
       event = "VimLeavePre";

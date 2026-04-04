@@ -70,52 +70,52 @@
           }
           {
             key = "]e";
-            action.__raw = "function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR }) end";
             options.desc = "Next Error";
           }
           {
             key = "[e";
-            action.__raw = "function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR }) end";
             options.desc = "Previous Error";
           }
           {
             key = "]w";
-            action.__raw = "function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.WARN }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.WARN }) end";
             options.desc = "Next Warning";
           }
           {
             key = "[w";
-            action.__raw = "function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.WARN }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.WARN }) end";
             options.desc = "Previous Warning";
           }
           {
             key = "]h";
-            action.__raw = "function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.HINT }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.HINT }) end";
             options.desc = "Next Hint";
           }
           {
             key = "[h";
-            action.__raw = "function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.HINT }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.HINT }) end";
             options.desc = "Previous Hint";
           }
           {
             key = "]i";
-            action.__raw = "function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.INFO }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.INFO }) end";
             options.desc = "Next Info";
           }
           {
             key = "[i";
-            action.__raw = "function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.INFO }) end";
+            action.__raw = "function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.INFO }) end";
             options.desc = "Previous Info";
           }
           {
             key = "[d";
-            action.__raw = "vim.diagnostic.goto_prev";
+            action.__raw = "function() vim.diagnostic.jump({ count = -1 }) end";
             options.desc = "Previous Diagnostic";
           }
           {
             key = "]d";
-            action.__raw = "vim.diagnostic.goto_next";
+            action.__raw = "function() vim.diagnostic.jump({ count = 1 }) end";
             options.desc = "Next Diagnostic";
           }
         ];

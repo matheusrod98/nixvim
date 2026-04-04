@@ -1,17 +1,4 @@
 {
-  programs.nixvim.diagnostic = {
-    settings = {
-      signs = {
-        text = {
-          ERROR = "󰅚";
-          WARN = "󰀪";
-          INFO = "󰋽";
-          HINT = "󰌶";
-        };
-      };
-    };
-  };
-
   programs.nixvim.lsp = {
     onAttach = ''
       if client:supports_method('textDocument/completion') then
