@@ -1,19 +1,16 @@
 {
   programs.nixvim.extraConfigLua = ''
     function _G.fd_find(cmdarg, _)
-      local root = vim.fs.root(0, '.git') or vim.uv.cwd()
+      local cwd = vim.fn.getcwd()
       local query = vim.trim(cmdarg)
-      if query == "" then
-        return {}
-      end
 
       local result = vim.system({
         'fd',
         '--type', 'f',
-        '--strip-cwd-prefix',
-        '.',
+        '--hidden',
+        '--color', 'never',
       }, {
-        cwd = root,
+        cwd = cwd,
         text = true,
       }):wait()
 
@@ -21,10 +18,15 @@
         return {}
       end
 
+      local files = vim.split(result.stdout, '\n', { trimempty = true })
+
+      if query == "" then
+        return files
+      end
+
       return vim.fn.matchfuzzy(
-        vim.split(result.stdout, '\n', { trimempty = true }),
-        query,
-        { limit = 50 }
+        files,
+        query
       )
     end
 
