@@ -88,7 +88,29 @@
         },
       },
     })
+
+    vim.opt.diffopt:append('vertical')
+    vim.opt.diffopt:append('algorithm:histogram')
   '';
+
+  programs.nixvim.filetype = {
+    extension = {
+      env = "dotenv";
+    };
+
+    filename = {
+      ".env" = "dotenv";
+      "env" = "dotenv";
+    };
+
+    pattern = {
+      "[jt]sconfig.*.json" = "jsonc";
+      "%.env%.[%w_.-]+" = [
+        "dotenv"
+        { priority = 1000; }
+      ];
+    };
+  };
 
   programs.nixvim.opts = {
     number = true;
@@ -101,10 +123,14 @@
     smartindent = true;
     undofile = true;
     swapfile = false;
+    writebackup = false;
     mouse = "a";
     splitbelow = true;
     splitright = true;
     wrap = false;
+    laststatus = 3;
+    signcolumn = "yes";
+    statusline = "%<%f %h%w%m%r %{% v:lua.require('vim._core.util').term_exitcode() %}%=%{% luaeval('(package.loaded[''vim.ui''] and vim.api.nvim_get_current_win() == tonumber(vim.g.actual_curwin or -1) and vim.ui.progress_status()) or '''' ')%}%{% &showcmdloc == 'statusline' ? '%-10.S ' : '' %}%{% exists('b:keymap_name') ? '<'..b:keymap_name..'> ' : '' %}%{% &busy > 0 ? '◐ ' : '' %}%{% luaeval('(package.loaded[''vim.diagnostic''] and next(vim.diagnostic.count()) and vim.diagnostic.status() .. '' '') or '''' ') %}%{empty(get(b:, 'minidiff_summary_string', '')) ? '' : get(b:, 'minidiff_summary_string', '') . ' '}%{% &ruler ? ( &rulerformat == '' ? '%-14.(%l,%c%V%) %P' : &rulerformat ) : '' %}";
     winborder = "rounded";
     pumborder = "rounded";
     wildignorecase = true;
@@ -121,7 +147,6 @@
     ignorecase = true;
     smartcase = true;
     confirm = true;
-    diffopt = "internal,filler,closeoff,indent-heuristic,inline:char,linematch:40,vertical,algorithm:histogram";
     grepprg = "rg --vimgrep --smart-case $*";
     grepformat = "%f:%l:%c:%m";
     findfunc = "v:lua.fd_find";
