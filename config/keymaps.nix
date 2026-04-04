@@ -3,6 +3,7 @@
     ./keymaps/buffers.nix
     ./keymaps/command_line.nix
     ./keymaps/copy_location.nix
+    ./keymaps/incremental_selection.nix
     ./keymaps/join_split.nix
     ./keymaps/location_list.nix
     ./keymaps/navigation.nix

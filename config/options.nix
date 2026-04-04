@@ -1,4 +1,34 @@
 {
+  programs.nixvim.extraConfigLua = ''
+    function _G.fd_find(cmdarg, _)
+      local root = vim.fs.root(0, '.git') or vim.uv.cwd()
+      local query = vim.trim(cmdarg)
+      if query == "" then
+        return {}
+      end
+
+      local result = vim.system({
+        'fd',
+        '--type', 'f',
+        '--strip-cwd-prefix',
+        '.',
+      }, {
+        cwd = root,
+        text = true,
+      }):wait()
+
+      if result.code ~= 0 or not result.stdout then
+        return {}
+      end
+
+      return vim.fn.matchfuzzy(
+        vim.split(result.stdout, '\n', { trimempty = true }),
+        query,
+        { limit = 50 }
+      )
+    end
+  '';
+
   programs.nixvim.opts = {
     number = true;
     relativenumber = true;
@@ -30,10 +60,9 @@
     smartcase = true;
     confirm = true;
     diffopt = "internal,filler,closeoff,indent-heuristic,inline:char,linematch:40,vertical,algorithm:histogram";
-    grepprg = "rg --vimgrep --smart-case --follow --hidden --glob '!.git/' $*";
+    grepprg = "rg --vimgrep --smart-case $*";
     grepformat = "%f:%l:%c:%m";
-    findfunc = "v:lua.nixvim_config_helpers.find";
-    showmode = false;
+    findfunc = "v:lua.fd_find";
     updatetime = 250;
     timeoutlen = 300;
   };
