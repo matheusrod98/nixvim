@@ -1,47 +1,14 @@
 {
-  programs.nixvim.autoGroups = {
-    "highlight-yank" = {
-      clear = true;
-    };
-    "cfilter" = {
-      clear = true;
-    };
-    "lsp" = {
-      clear = true;
-    };
-    "help-window" = {
-      clear = true;
-    };
-    "window-management" = {
-      clear = true;
-    };
-    "cursorline" = {
-      clear = true;
-    };
-    "cursor-shape" = {
-      clear = true;
-    };
-  };
-
   programs.nixvim.autoCmd = [
     {
       event = "LspProgress";
       desc = "Redraw statusline on LSP progress";
-      group = "lsp";
       command = "redrawstatus";
-    }
-    {
-      event = "FileType";
-      pattern = "help";
-      command = "wincmd L";
-      desc = "Open help in a vertical split on the right";
-      group = "help-window";
     }
     {
       event = "VimResized";
       command = "wincmd =";
       desc = "Equalize window sizes after resizing Vim";
-      group = "window-management";
     }
     {
       event = "TextYankPost";
@@ -51,14 +18,12 @@
     }
     {
       event = "QuickFixCmdPost";
-      group = "cfilter";
       pattern = "*";
       callback.__raw = "function() vim.cmd('packadd cfilter') end";
       once = true;
     }
     {
       event = "FileType";
-      group = "cfilter";
       pattern = "qf";
       callback.__raw = "function() vim.cmd('packadd cfilter') end";
       once = true;

@@ -2,12 +2,10 @@
   programs.nixvim.opts = {
     number = true;
     relativenumber = true;
-    scrolloff = 10;
-    sidescrolloff = 10;
+    scrolloff = 8;
+    sidescrolloff = 8;
     tabstop = 4;
     shiftwidth = 4;
-    softtabstop = 4;
-    expandtab = true;
     breakindent = true;
     smartindent = true;
     undofile = true;
@@ -19,7 +17,7 @@
     winborder = "rounded";
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
-    wildmode = "longest:full,full";
+    wildmode = "list:full";
     autocomplete = true;
     pumheight = 8;
     complete = ".,w,b,u,t,o";
@@ -31,9 +29,7 @@
     ignorecase = true;
     smartcase = true;
     confirm = true;
-    diffopt = "vertical,algorithm:histogram,indent-heuristic,linematch:60";
-    grepprg = "rg --vimgrep --smart-case --follow --hidden --glob '!.git/'";
-    grepformat = "%f:%l:%c:%m";
+    diffopt = "internal,filler,closeoff,indent-heuristic,inline:char,linematch:40,vertical,algorithm:histogram";
     showmode = false;
     updatetime = 250;
     timeoutlen = 300;
@@ -41,20 +37,7 @@
 
   programs.nixvim.globals = {
     mapleader = " ";
+    netrw_banner = 0;
+    have_nerd_font = true;
   };
-
-  programs.nixvim.extraConfigLua = ''
-    function _G.FdFindFiles(cmdarg, _cmdcomplete)
-      local fnames = vim.fn.systemlist('fd --type f --hidden --color=never')
-      if #cmdarg == 0 then
-        return fnames
-      else
-        return vim.fn.matchfuzzy(fnames, cmdarg)
-      end
-    end
-    vim.o.findfunc = 'v:lua.FdFindFiles'
-
-    vim.g.netrw_banner = 0
-    vim.g.have_nerd_font = true;
-  '';
 }

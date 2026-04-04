@@ -1,7 +1,7 @@
 {
   imports = [
     ./abolish.nix
-    # ./builtin.nix
+    ./builtin.nix
     ./colorscheme.nix
     ./lsp.nix
     ./mini.nix

@@ -33,7 +33,7 @@
           vim.keymap.set("n", "gD", function() Snacks.picker.lsp_declarations() end, 
             { buffer = bufnr, desc = "Go to Declaration" })
           
-          vim.keymap.set("n", "<leader>rf", function() Snacks.picker.lsp_references() end, 
+          vim.keymap.set("n", "<leader>fr", function() Snacks.picker.lsp_references() end, 
             { buffer = bufnr, desc = "References", nowait = true })
           
           vim.keymap.set("n", "<leader>ip", function() Snacks.picker.lsp_implementations() end, 
@@ -45,13 +45,13 @@
           vim.keymap.set("n", "<leader>oc", function() Snacks.picker.lsp_outgoing_calls() end, 
             { buffer = bufnr, desc = "Outgoing Calls", silent = true })
           
-          vim.keymap.set("n", "<leader>dw", function() Snacks.picker.diagnostics() end, 
+          vim.keymap.set("n", "<leader>wd", function() Snacks.picker.diagnostics() end, 
             { buffer = bufnr, desc = "Diagnostics" })
           
-          vim.keymap.set("n", "<leader>db", function() Snacks.picker.diagnostics_buffer() end, 
+          vim.keymap.set("n", "<leader>bd", function() Snacks.picker.diagnostics_buffer() end, 
             { buffer = bufnr, desc = "Buffer Diagnostics" })
           
-          vim.keymap.set("n", "<leader>dl", function() vim.diagnostic.open_float() end, 
+          vim.keymap.set("n", "<leader>ld", function() vim.diagnostic.open_float() end, 
             { buffer = bufnr, desc = "Line Diagnostics", silent = true })
           
           vim.keymap.set("n", "]e", function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR }) end, 

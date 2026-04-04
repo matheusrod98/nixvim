@@ -25,7 +25,7 @@ in
     iferr
     impl
     reftools
-    # ginkgo
+    ginkgo
     gotestsum
     govulncheck
     go-enum

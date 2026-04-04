@@ -4,7 +4,7 @@
       mode = "n";
       key = "<leader><leader>";
       action.__raw = "function() Snacks.picker.smart() end";
-      options.desc = "Buffers";
+      options.desc = "Smart";
     }
     {
       mode = "n";
@@ -50,12 +50,6 @@
       key = "<leader>f/";
       action.__raw = "function() Snacks.picker.search_history() end";
       options.desc = "Search History";
-    }
-    {
-      mode = "n";
-      key = "<leader>fc";
-      action.__raw = "function() Snacks.picker.command_history() end";
-      options.desc = "Command History";
     }
     {
       mode = "n";
