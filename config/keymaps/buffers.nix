@@ -18,5 +18,14 @@
         silent = true;
       };
     }
+    {
+      key = "<leader>bx";
+      action.__raw = ''function() Snacks.bufdelete() end'';
+      mode = "n";
+      options = {
+        desc = "Delete buffer";
+        silent = true;
+      };
+    }
   ];
 }

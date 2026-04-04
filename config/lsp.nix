@@ -1,9 +1,6 @@
 {
   programs.nixvim.lsp = {
     onAttach = ''
-      if client:supports_method('textDocument/completion') then
-        vim.lsp.completion.enable(true, client.id, bufnr)
-      end
       if client:supports_method('textDocument/foldingRange') then
         local win = vim.api.nvim_get_current_win()
         vim.wo[win].foldmethod = 'expr'

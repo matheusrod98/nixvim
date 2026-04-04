@@ -27,5 +27,23 @@
         silent = true;
       };
     }
+    {
+      key = "]r";
+      action.__raw = ''function() Snacks.words.jump(vim.v.count1) end'';
+      mode = "n";
+      options = {
+        desc = "Next reference";
+        silent = true;
+      };
+    }
+    {
+      key = "[r";
+      action.__raw = ''function() Snacks.words.jump(-vim.v.count1) end'';
+      mode = "n";
+      options = {
+        desc = "Previous reference";
+        silent = true;
+      };
+    }
   ];
 }
