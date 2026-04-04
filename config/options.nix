@@ -83,7 +83,7 @@
     pumborder = "rounded";
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
-    wildmode = "noselect:longest";
+    wildmode = "noselect:full";
     autocomplete = true;
     pumheight = 8;
     complete = ".,w,b,u,t,o";
