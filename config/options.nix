@@ -62,6 +62,15 @@
       vim.fn.setreg('+', value)
       vim.notify('Copied to clipboard: ' .. value, vim.log.levels.INFO)
     end
+
+    vim.diagnostic.config({
+      jump = {
+        float = {
+          scope = 'cursor',
+          source = 'if_many',
+        },
+      },
+    })
   '';
 
   programs.nixvim.opts = {
