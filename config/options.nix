@@ -1,6 +1,6 @@
 {
   programs.nixvim.extraConfigLua = ''
-    function _G.fd_find(cmdarg, _)
+    function _G.fd_find(cmdarg, cmdcomplete)
       local cwd = vim.fn.getcwd()
       local query = vim.trim(cmdarg)
 
@@ -19,6 +19,21 @@
       end
 
       local files = vim.split(result.stdout, '\n', { trimempty = true })
+
+      if cmdcomplete then
+        if #query < 2 then
+          return {}
+        end
+
+        local matches = vim.fn.matchfuzzy(files, query)
+        local limited = {}
+
+        for i = 1, math.min(#matches, 12) do
+          limited[i] = matches[i]
+        end
+
+        return limited
+      end
 
       if query == "" then
         return files
