@@ -9,9 +9,6 @@
     enable = true;
     autoLoad = true;
     settings = {
-      cli = {
-        picker = "snacks";
-      };
       copilot = {
         status.level.__raw = "vim.log.levels.OFF";
       };

@@ -8,7 +8,6 @@
     ./oil.nix
     ./sidekick.nix
     ./sleuth.nix
-    ./snacks.nix
     ./statusline.nix
     ./treesitter.nix
   ];

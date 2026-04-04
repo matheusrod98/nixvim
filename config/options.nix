@@ -30,6 +30,9 @@
     smartcase = true;
     confirm = true;
     diffopt = "internal,filler,closeoff,indent-heuristic,inline:char,linematch:40,vertical,algorithm:histogram";
+    grepprg = "rg --vimgrep --smart-case --follow --hidden --glob '!.git/' $*";
+    grepformat = "%f:%l:%c:%m";
+    findfunc = "v:lua.nixvim_config_helpers.find";
     showmode = false;
     updatetime = 250;
     timeoutlen = 300;

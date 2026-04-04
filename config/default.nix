@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./commands.nix
     ./options.nix
     ./keymaps.nix
     ./autocmds.nix
