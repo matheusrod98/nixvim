@@ -80,6 +80,7 @@
     splitright = true;
     wrap = false;
     winborder = "rounded";
+    pumborder = "rounded";
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
     wildmode = "noselect:longest";
