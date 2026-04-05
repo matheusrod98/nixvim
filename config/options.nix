@@ -1,4 +1,9 @@
 {
+  programs.nixvim.extraConfigLua = ''
+    vim.opt.diffopt:append('vertical')
+    vim.opt.diffopt:append('algorithm:histogram')
+  '';
+
   programs.nixvim.opts = {
     number = true;
     relativenumber = true;
@@ -30,7 +35,6 @@
     ignorecase = true;
     smartcase = true;
     confirm = true;
-    diffopt = "vertical,algorithm:histogram";
     grepprg = "rg --vimgrep --smart-case $*";
     grepformat = "%f:%l:%c:%m";
     findfunc = "v:lua.fd_find";
