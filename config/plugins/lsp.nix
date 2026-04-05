@@ -9,18 +9,6 @@
             action = "hover";
             desc = "Hover Documentation";
           };
-          "gd" = {
-            action = "definition";
-            desc = "Go to Definition";
-          };
-          "gD" = {
-            action = "declaration";
-            desc = "Go to Declaration";
-          };
-          "gt" = {
-            action = "type_definition";
-            desc = "Go to Type Definition";
-          };
           "<leader>rn" = {
             action = "rename";
             desc = "Rename";
@@ -31,6 +19,52 @@
           };
         };
         extra = [
+          {
+            key = "gd";
+            action.__raw = "function() Snacks.picker.lsp_definitions() end";
+            options.desc = "Goto Definition";
+          }
+          {
+            key = "gD";
+            action.__raw = "function() Snacks.picker.lsp_declarations() end";
+            options.desc = "Goto Declaration";
+          }
+          {
+            key = "<leader>fr";
+            action.__raw = "function() Snacks.picker.lsp_references() end";
+            options.desc = "Find References";
+            options.nowait = true;
+          }
+          {
+            key = "<leader>ip";
+            action.__raw = "function() Snacks.picker.lsp_implementations() end";
+            options.desc = "Goto Implementation";
+          }
+          {
+            key = "<leader>gt";
+            action.__raw = "function() Snacks.picker.lsp_type_definitions() end";
+            options.desc = "Goto T[y]pe Definition";
+          }
+          {
+            key = "<leader>ic";
+            action.__raw = "function() Snacks.picker.lsp_incoming_calls() end";
+            options.desc = "C[a]lls Incoming";
+          }
+          {
+            key = "<leader>oc";
+            action.__raw = "function() Snacks.picker.lsp_outgoing_calls() end";
+            options.desc = "C[a]lls Outgoing";
+          }
+          {
+            key = "<leader>ss";
+            action.__raw = "function() Snacks.picker.lsp_symbols() end";
+            options.desc = "LSP Symbols";
+          }
+          {
+            key = "<leader>sS";
+            action.__raw = "function() Snacks.picker.lsp_workspace_symbols() end";
+            options.desc = "LSP Workspace Symbols";
+          }
           {
             key = "<leader>=";
             action.__raw = "function() vim.lsp.buf.format({ async = true }) end";
