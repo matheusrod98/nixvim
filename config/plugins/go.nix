@@ -83,18 +83,26 @@ in {
       go-nvim
     ];
 
-    extraConfigLua = ''
-      require("go").setup({
-        lsp_cfg = false,
-        textobjects = false,
-        lsp_inlay_hints = { enable = false },
-        lsp_codelens = false,
-        dap_debug = false,
-        dap_debug_gui = false,
-        dap_debug_vt = false,
-        gofmt = "gofumpt",
-        goimports = "goimports",
-      })
-    '';
+    plugins.lz-n.plugins = [
+      {
+        __unkeyed-1 = "go.nvim";
+        ft = [ "go" "gomod" "gosum" "gowork" "gotmpl" ];
+        after.__raw = ''
+          function()
+            require("go").setup({
+              lsp_cfg = false,
+              textobjects = false,
+              lsp_inlay_hints = { enable = false },
+              lsp_codelens = false,
+              dap_debug = false,
+              dap_debug_gui = false,
+              dap_debug_vt = false,
+              gofmt = "gofumpt",
+              goimports = "goimports",
+            })
+          end
+        '';
+      }
+    ];
   };
 }
