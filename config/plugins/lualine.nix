@@ -6,11 +6,11 @@
         globalstatus = true;
       };
       sections = {
-        lualine_x = {
-          __unkeyed-1 = "encoding";
-          __unkeyed-2 = "fileformat";
-          __unkeyed-3 = "filetype";
-          __unkeyed-4.__raw = ''
+        lualine_x = [
+          "encoding"
+          "fileformat"
+          "filetype"
+          { __raw = ''
             function()
               local status = vim.lsp.status()
               if #status == 0 then return "" end
@@ -27,8 +27,8 @@
               end
               return table.concat(parts, " | ")
             end
-          '';
-        };
+          ''; }
+        ];
       };
     };
   };
