@@ -22,8 +22,8 @@
     wrap = false;
     laststatus = 3;
     showmode = false;
-    cnmdheight = 0;
-    winnborder = "rounded";
+    cmdheight = 0;
+    winborder = "rounded";
     pumborder = "rounded";
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
