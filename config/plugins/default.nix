@@ -16,5 +16,6 @@
     ./theme.nix
     ./treesitter.nix
     ./treesj.nix
+    ./vtsls.nix
   ];
 }
