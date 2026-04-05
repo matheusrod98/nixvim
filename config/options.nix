@@ -21,7 +21,6 @@
     splitright = true;
     wrap = false;
     laststatus = 3;
-    signcolumn = "yes";
     winborder = "rounded";
     pumborder = "rounded";
     wildignorecase = true;
@@ -35,9 +34,6 @@
     ignorecase = true;
     smartcase = true;
     confirm = true;
-    grepprg = "rg --vimgrep --smart-case $*";
-    grepformat = "%f:%l:%c:%m";
-    findfunc = "v:lua.fd_find";
     updatetime = 250;
     timeoutlen = 300;
   };
