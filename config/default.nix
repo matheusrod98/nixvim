@@ -3,7 +3,7 @@
     ./globals.nix
     ./options.nix
     ./filetype.nix
-    ./lua.nix
+    ./helpers.nix
     ./keys.nix
     ./autocmd.nix
     ./lsp.nix
