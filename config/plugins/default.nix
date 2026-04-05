@@ -3,14 +3,18 @@
     ./abolish.nix
     ./blink.nix
     ./builtin.nix
-    ./colorscheme.nix
+    ./context.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
     ./oil.nix
-    ./snacks.nix
+    ./schemastore.nix
     ./sidekick.nix
     ./sleuth.nix
+    ./snacks.nix
+    ./textobj.nix
+    ./theme.nix
     ./treesitter.nix
+    ./treesj.nix
   ];
 }

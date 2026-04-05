@@ -4,11 +4,11 @@
     ./options.nix
     ./filetype.nix
     ./lua.nix
-    ./keymaps.nix
-    ./autocmds.nix
+    ./keys.nix
+    ./autocmd.nix
     ./lsp.nix
     ./plugins
-    ./languages.nix
+    ./lang.nix
   ];
 
   programs.nixvim = {
@@ -31,14 +31,9 @@
     };
 
     extraPackages = with pkgs; [
-      # Faster :find and :grep
       fd
       ripgrep
-
-      # JSON -> Language type
       quicktype
-
-      # Lua
       lua51Packages.luarocks
       lua51Packages.lua
     ];

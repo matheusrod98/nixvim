@@ -30,6 +30,7 @@
     ignorecase = true;
     smartcase = true;
     confirm = true;
+    diffopt = "vertical,algorithm:histogram";
     grepprg = "rg --vimgrep --smart-case $*";
     grepformat = "%f:%l:%c:%m";
     findfunc = "v:lua.fd_find";

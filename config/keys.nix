@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./keymaps/buffer.nix
+    ./keymaps/clipboard.nix
+    ./keymaps/git.nix
+    ./keymaps/lsp.nix
+    ./keymaps/navigate.nix
+    ./keymaps/oil.nix
+    ./keymaps/qflist.nix
+    ./keymaps/loclist.nix
+    ./keymaps/search.nix
+    ./keymaps/select.nix
+    ./keymaps/sidekick.nix
+    ./keymaps/snacks.nix
+    ./keymaps/tab.nix
+    ./keymaps/textobj.nix
+    ./keymaps/treesj.nix
+    ./keymaps/undotree.nix
+    ./keymaps/window.nix
+  ];
+}
