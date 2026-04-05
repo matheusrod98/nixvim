@@ -6,18 +6,12 @@
         globalstatus = true;
       };
       sections = {
-        lualine_x = [
-          "encoding"
-          "fileformat"
-          "filetype"
-          { __raw = ''
-            function()
-              local progress = _G.get_lsp_progress()
-              if progress == "" then return "" end
-              return progress
-            end
-          ''; }
-        ];
+        lualine_a = [ "mode" ];
+        lualine_b = [ "branch" "diff" "diagnostics" ];
+        lualine_c = [ "filename" ];
+        lualine_x = [ "lsp_status" "encoding" "fileformat" "filetype" ];
+        lualine_y = [ "searchcount" "progress" ];
+        lualine_z = [ "location" ];
       };
     };
   };
