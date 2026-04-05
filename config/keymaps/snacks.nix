@@ -29,7 +29,7 @@
     }
     {
       mode = "n";
-      key = "<leader>fg";
+      key = "<leader>lg";
       action.__raw = ''function() Snacks.picker.grep() end'';
       options = {
         desc = "Live grep";
@@ -38,7 +38,7 @@
     }
     {
       mode = "n";
-      key = "<leader>fG";
+      key = "<leader>lG";
       action.__raw = ''function() Snacks.picker.grep({ live = false }) end'';
       options = {
         desc = "Grep";
@@ -96,15 +96,6 @@
       action.__raw = ''function() Snacks.picker.man() end'';
       options = {
         desc = "Man pages";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>gg";
-      action.__raw = ''function() Snacks.lazygit.open() end'';
-      options = {
-        desc = "Open LazyGit";
         silent = true;
       };
     }

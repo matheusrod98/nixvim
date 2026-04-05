@@ -108,16 +108,6 @@
             action.__raw = "function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.INFO }) end";
             options.desc = "Previous Info";
           }
-          {
-            key = "[d";
-            action.__raw = "function() vim.diagnostic.jump({ count = -1 }) end";
-            options.desc = "Previous Diagnostic";
-          }
-          {
-            key = "]d";
-            action.__raw = "function() vim.diagnostic.jump({ count = 1 }) end";
-            options.desc = "Next Diagnostic";
-          }
         ];
       };
     };

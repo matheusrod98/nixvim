@@ -1,8 +1,9 @@
 {
   imports = [
     ./keymaps/buffers.nix
-    ./keymaps/command_line.nix
+    ./keymaps/snacks.nix
     ./keymaps/copy_location.nix
+    ./keymaps/git.nix
     ./keymaps/incremental_selection.nix
     ./keymaps/join_split.nix
     ./keymaps/location_list.nix
@@ -12,6 +13,7 @@
     ./keymaps/search.nix
     ./keymaps/sidekick.nix
     ./keymaps/tabs.nix
+    ./keymaps/treesitter_textobjects.nix
     ./keymaps/undotree.nix
     ./keymaps/window_management.nix
   ];

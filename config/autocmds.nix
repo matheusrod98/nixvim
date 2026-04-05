@@ -1,12 +1,6 @@
 {
   programs.nixvim.autoCmd = [
     {
-      event = "User";
-      pattern = "MiniDiffUpdated";
-      desc = "Redraw statusline on mini diff updates";
-      command = "redrawstatus";
-    }
-    {
       event = "VimResized";
       command = "wincmd =";
       desc = "Equalize window sizes after resizing Vim";

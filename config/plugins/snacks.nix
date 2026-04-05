@@ -12,10 +12,6 @@
 
       settings = {
         bigfile.enabled = false;
-        notifier.enabled = false;
-
-        bufdelete.enabled = true;
-
         dashboard = {
           enabled = true;
           preset.keys = [
@@ -89,11 +85,7 @@
 
         image.enabled = true;
         lazygit.enabled = true;
-        picker = {
-          enabled = true;
-          ui_select = true;
-        };
-
+        picker.enabled = true;
         quickfile.enabled = true;
         statuscolumn.enabled = true;
         words.enabled = true;

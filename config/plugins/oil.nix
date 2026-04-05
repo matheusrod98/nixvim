@@ -11,12 +11,5 @@
         };
       };
     };
-
-    extraConfigLuaPost = ''
-      local ok, oil = pcall(require,'oil')
-      if ok then
-        oil.set_columns({})
-      end
-    '';
   };
 }

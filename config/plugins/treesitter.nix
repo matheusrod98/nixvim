@@ -6,9 +6,24 @@
       tree-sitter
     ];
 
+    extraConfigLuaPost = ''
+      local ok, textobjects = pcall(require, "nvim-treesitter-textobjects")
+      if ok then
+        textobjects.setup({
+          select = {
+            lookahead = true,
+          },
+          move = {
+            set_jumps = true,
+          },
+        })
+      end
+    '';
+
     plugins = {
       treesitter = {
         enable = true;
+        autoLoad = true;
         folding.enable = true;
         highlight.enable = true;
         indent.enable = true;
@@ -16,39 +31,18 @@
       };
       treesitter-context = {
         enable = true;
+        autoLoad = true;
         settings = {
           separator = "─";
         };
       };
       treesitter-textobjects = {
         enable = true;
-        settings = {
-          select = {
-            enable = true;
-            lookahead = true;
-            keymaps = {
-              "af" = "@function.outer";
-              "if" = "@function.inner";
-              "ac" = "@class.outer";
-              "ic" = "@class.inner";
-              "as" = "@local.scope";
-              "aa" = "@parameter.outer";
-              "ia" = "@parameter.inner";
-            };
-          };
-          swap = {
-            enable = true;
-            swap_next = {
-              "gp" = "@parameter.inner";
-            };
-            swap_previous = {
-              "gP" = "@parameter.inner";
-            };
-          };
-        };
+        autoLoad = true;
       };
       treesj = {
         enable = true;
+        autoLoad = true;
         settings = {
           use_default_keymaps = false;
         };

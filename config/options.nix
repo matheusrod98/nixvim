@@ -1,50 +1,5 @@
 {
   programs.nixvim.extraConfigLua = ''
-    function _G.fd_find(cmdarg, cmdcomplete)
-      local cwd = vim.fn.getcwd()
-      local query = vim.trim(cmdarg)
-
-      local result = vim.system({
-        'fd',
-        '--type', 'f',
-        '--hidden',
-        '--color', 'never',
-      }, {
-        cwd = cwd,
-        text = true,
-      }):wait()
-
-      if result.code ~= 0 or not result.stdout then
-        return {}
-      end
-
-      local files = vim.split(result.stdout, '\n', { trimempty = true })
-
-      if cmdcomplete then
-        if #query < 2 then
-          return {}
-        end
-
-        local matches = vim.fn.matchfuzzy(files, query)
-        local limited = {}
-
-        for i = 1, math.min(#matches, 12) do
-          limited[i] = matches[i]
-        end
-
-        return limited
-      end
-
-      if query == "" then
-        return files
-      end
-
-      return vim.fn.matchfuzzy(
-        files,
-        query
-      )
-    end
-
     local function toggle_list(kind, open_cmd, close_cmd)
       for _, win in pairs(vim.fn.getwininfo()) do
         if win[kind] == 1 then
@@ -135,12 +90,9 @@
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
     wildmode = "noselect:full";
-    autocomplete = true;
     pumheight = 8;
     complete = ".,w,b,u,t,o";
     completeopt = "fuzzy,menuone,noselect,popup";
-    foldmethod = "expr";
-    foldexpr = "v:lua.vim.treesitter.foldexpr()";
     foldlevelstart = 99;
     inccommand = "split";
     ignorecase = true;
