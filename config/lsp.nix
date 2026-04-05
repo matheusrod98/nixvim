@@ -1,4 +1,18 @@
 {
+  programs.nixvim.diagnostic = {
+    settings = {
+      signs = {
+        text = {
+          ERROR = "󰅚";
+          WARN = "󰀪";
+          INFO = "󰋽";
+          HINT = "󰌶";
+        };
+        severity_sort = true;
+      };
+    };
+  };
+
   programs.nixvim.lsp = {
     onAttach = ''
       if client:supports_method('textDocument/foldingRange') then
