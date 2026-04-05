@@ -8,7 +8,6 @@
     ./autocmd.nix
     ./lsp.nix
     ./plugins
-    ./lang.nix
   ];
 
   programs.nixvim = {

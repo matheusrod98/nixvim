@@ -4,6 +4,7 @@
     ./blink.nix
     ./builtin.nix
     ./context.nix
+    ./go.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix

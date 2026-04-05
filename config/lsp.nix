@@ -66,7 +66,47 @@
         html.enable = true;
         vtsls.enable = true;
         tailwindcss.enable = true;
-        gopls.enable = true;
+        gopls = {
+          enable = true;
+          config = {
+            settings = {
+              gopls = {
+                staticcheck = true;
+                matcher = "Fuzzy";
+                symbolMatcher = "FastFuzzy";
+                usePlaceholders = true;
+                completeUnimported = true;
+                vulncheck = "Imports";
+                gofumpt = true;
+                analyses = {
+                  useany = true;
+                  unusedvariable = true;
+                  shadow = true;
+                };
+                codelenses = {
+                  generate = true;
+                  gc_details = true;
+                  test = true;
+                  tidy = true;
+                  vendor = true;
+                  regenerate_cgo = true;
+                  upgrade_dependency = true;
+                };
+                hints = {
+                  assignVariableTypes = true;
+                  compositeLiteralFields = true;
+                  compositeLiteralTypes = true;
+                  constantValues = true;
+                  functionTypeParameters = true;
+                  parameterNames = true;
+                  rangeVariableTypes = true;
+                };
+                diagnosticsDelay = "250ms";
+                diagnosticsTrigger = "Save";
+              };
+            };
+          };
+        };
         marksman.enable = true;
         copilot.enable = true;
       };
