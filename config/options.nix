@@ -21,7 +21,9 @@
     splitright = true;
     wrap = false;
     laststatus = 3;
-    winborder = "rounded";
+    showmode = false;
+    cnmdheight = 0;
+    winnborder = "rounded";
     pumborder = "rounded";
     wildignorecase = true;
     wildoptions = "pum,fuzzy";
