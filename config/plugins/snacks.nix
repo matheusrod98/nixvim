@@ -27,6 +27,7 @@
       };
       image.enabled = true;
       lazygit.enabled = true;
+      styles.lazygit.border = true;
       picker.enabled = true;
       quickfile.enabled = true;
       statuscolumn.enabled = true;
