@@ -1,4 +1,8 @@
-{
+{pkgs, ...}: {
+  programs.nixvim.extraPackages = with pkgs; [
+    inotify-tools
+  ];
+
   programs.nixvim = {
     diagnostic = {
       settings = {
@@ -28,7 +32,7 @@
 
     lsp = {
       onAttach = ''
-        if client:supports_method('textDocument/foldingRange') then
+        if client:supports_method('textDocument/foldingRange') and not vim.wo.diff then
           local win = vim.api.nvim_get_current_win()
           vim.wo[win].foldmethod = 'expr'
           vim.wo[win].foldexpr = 'v:lua.vim.lsp.foldexpr()'
