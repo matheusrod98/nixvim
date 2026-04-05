@@ -1,16 +1,12 @@
-{ pkgs, ... }:
+{pkgs, ...}: {
+  programs.nixvim.extraPlugins = with pkgs.vimPlugins; [
+    vague-nvim
+  ];
 
-{
-  programs.nixvim = {
-    extraPlugins = with pkgs.vimPlugins; [
-      vague-nvim
-    ];
-
-    extraConfigLuaPre = ''
-      require("vague").setup({
-        transparent = true,
-      })
-      vim.cmd("colorscheme vague")
-    '';
-  };
+  programs.nixvim.extraConfigLuaPre = ''
+    require("vague").setup({
+      transparent = true,
+    })
+    vim.cmd("colorscheme vague")
+  '';
 }

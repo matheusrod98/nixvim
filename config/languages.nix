@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   go-enum = pkgs.buildGoModule rec {
     pname = "go-enum";
     version = "0.6.0";
@@ -14,8 +12,7 @@ let
 
     vendorHash = "sha256-YzIVI+PLZt24s/KjTxifWrvjrIU8jLvkC1lgw4yG6cg=";
   };
-in
-{
+in {
   programs.nixvim.extraPackages = with pkgs; [
     # Golang
     golines

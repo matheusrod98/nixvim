@@ -18,7 +18,7 @@
             };
           };
         };
-        icons = { };
+        icons = {};
         hipatterns = {
           highlighters = {
             fixme = {

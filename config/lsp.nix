@@ -27,9 +27,7 @@
         enable = true;
         config = {
           json = {
-            validate = {
-              enable = true;
-            };
+            validate.enable = true;
             schemas.__raw = "require('schemastore').json.schemas()";
           };
         };
@@ -46,30 +44,14 @@
           };
         };
       };
-      nixd = {
-        enable = true;
-      };
-      cssls = {
-        enable = true;
-      };
-      html = {
-        enable = true;
-      };
-      vtsls = {
-        enable = true;
-      };
-      tailwindcss = {
-        enable = true;
-      };
-      gopls = {
-        enable = true;
-      };
-      marksman = {
-        enable = true;
-      };
-      copilot = {
-        enable = true;
-      };
+      nixd.enable = true;
+      cssls.enable = true;
+      html.enable = true;
+      vtsls.enable = true;
+      tailwindcss.enable = true;
+      gopls.enable = true;
+      marksman.enable = true;
+      copilot.enable = true;
     };
   };
 }

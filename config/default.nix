@@ -1,8 +1,9 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
+    ./globals.nix
     ./options.nix
+    ./filetype.nix
+    ./lua.nix
     ./keymaps.nix
     ./autocmds.nix
     ./lsp.nix
