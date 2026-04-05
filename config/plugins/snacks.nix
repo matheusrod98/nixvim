@@ -37,7 +37,16 @@
               icon = " ";
               key = "c";
               desc = "Config";
-              action.__raw = ''function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end'';
+              action.__raw = ''
+                function()
+                  local git_root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+                  if vim.v.shell_error == 0 and git_root ~= "" then
+                    Snacks.picker.files({ cwd = git_root })
+                  else
+                    Snacks.picker.files()
+                  end
+                end
+              '';
             }
             {
               icon = "󰒲 ";

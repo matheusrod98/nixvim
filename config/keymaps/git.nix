@@ -39,5 +39,14 @@
         silent = true;
       };
     }
+    {
+      mode = "n";
+      key = "<leader>gb";
+      action.__raw = ''function() Snacks.git.blame_line() end'';
+      options = {
+        desc = "Git Blame Line";
+        silent = true;
+      };
+    }
   ];
 }

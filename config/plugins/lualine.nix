@@ -4,7 +4,6 @@
     settings = {
       options = {
         globalstatus = true;
-        icons_enabled = true;
       };
     };
   };

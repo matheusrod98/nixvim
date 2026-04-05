@@ -29,23 +29,6 @@
             action = "code_action";
             desc = "Code Actions";
           };
-          "<leader>fr" = {
-            action = "references";
-            desc = "References";
-            nowait = true;
-          };
-          "<leader>ip" = {
-            action = "implementation";
-            desc = "Goto Implementation";
-          };
-          "<leader>ic" = {
-            action = "incoming_calls";
-            desc = "Incoming Calls";
-          };
-          "<leader>oc" = {
-            action = "outgoing_calls";
-            desc = "Outgoing Calls";
-          };
         };
         extra = [
           {
