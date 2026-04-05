@@ -16,6 +16,11 @@
           { icon = " "; key = "g"; desc = "Find Text"; action = ":lua Snacks.dashboard.pick('live_grep')"; }
           { icon = " "; key = "q"; desc = "Quit"; action = ":qa"; }
         ];
+        sections = [
+          { section = "header"; }
+          { section = "keys"; gap = 1; padding = 1; }
+          { section = "startup"; }
+        ];
       };
       image.enabled = true;
       lazygit.enabled = true;
