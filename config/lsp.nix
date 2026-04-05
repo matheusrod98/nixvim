@@ -17,7 +17,7 @@
     extraConfigLua = ''
       vim.diagnostic.config({
         jump = {
-          float = {
+          on_jump = {
             scope = 'cursor',
             source = 'if_many',
           },

@@ -2,6 +2,10 @@
   programs.nixvim.extraPackages = with pkgs; [
     imagemagick
     lazygit
+    ghostscript
+    tectonic
+    mermaid-cli
+    sqlite
   ];
 
   programs.nixvim.plugins.snacks = {
