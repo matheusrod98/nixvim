@@ -15,11 +15,20 @@
       desc = "Restore terminal default cursor on exit";
       callback.__raw = ''
         function()
-          vim.opt.guicursor = ""
           vim.cmd('set guicursor=a:ver25-blinkon1')
         end
       '';
     }
-
+    {
+      event = "FileType";
+      pattern = [ "markdown" "text" "gitcommit" "rst" ];
+      desc = "Enable spell checking for prose filetypes";
+      callback.__raw = ''
+        function()
+          vim.opt_local.spell = true
+          vim.opt_local.spelllang = "en_us,pt_br"
+        end
+      '';
+    }
   ];
 }

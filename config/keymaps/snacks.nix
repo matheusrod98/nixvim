@@ -99,5 +99,14 @@
         silent = true;
       };
     }
+    {
+      mode = "n";
+      key = "<leader>ft";
+      action.__raw = ''function() Snacks.picker.todo_comments() end'';
+      options = {
+        desc = "Todo/Fix/Hack";
+        silent = true;
+      };
+    }
   ];
 }

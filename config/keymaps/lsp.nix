@@ -40,17 +40,17 @@
       {
         key = "<leader>gt";
         action.__raw = "function() Snacks.picker.lsp_type_definitions() end";
-        options.desc = "Goto T[y]pe Definition";
+        options.desc = "Goto T[t]ype Definition";
       }
       {
         key = "<leader>ic";
         action.__raw = "function() Snacks.picker.lsp_incoming_calls() end";
-        options.desc = "C[a]lls Incoming";
+        options.desc = "[I]ncoming Calls";
       }
       {
         key = "<leader>oc";
         action.__raw = "function() Snacks.picker.lsp_outgoing_calls() end";
-        options.desc = "C[a]lls Outgoing";
+        options.desc = "[O]utgoing Calls";
       }
       {
         key = "<leader>ss";
@@ -121,6 +121,16 @@
         key = "[i";
         action.__raw = "function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.INFO }) end";
         options.desc = "Previous Info";
+      }
+      {
+        key = "<leader>cl";
+        action.__raw = "vim.lsp.codelens.run";
+        options.desc = "Run code lens";
+      }
+      {
+        key = "<leader>cL";
+        action.__raw = "vim.lsp.codelens.refresh";
+        options.desc = "Refresh code lenses";
       }
     ];
   };

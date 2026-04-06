@@ -6,6 +6,7 @@
   programs.nixvim = {
     diagnostic = {
       settings = {
+        severity_sort = true;
         signs = {
           text = {
             ERROR = "󰅚";
@@ -13,22 +14,16 @@
             INFO = "󰋽";
             HINT = "󰌶";
           };
-          severity_sort = true;
+        };
+        float = {
+          focus = false;
+          scope = "cursor";
+        };
+        jump = {
+          on_jump.__raw = "vim.diagnostic.open_float";
         };
       };
     };
-
-    extraConfigLua = ''
-      vim.diagnostic.config({
-        float = {
-          focus = false,
-          scope = 'cursor',
-        },
-        jump = {
-          on_jump = vim.diagnostic.open_float,
-        },
-      })
-    '';
 
     lsp = {
       onAttach = ''

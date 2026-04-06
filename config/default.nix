@@ -35,6 +35,9 @@
       quicktype
       lua51Packages.luarocks
       lua51Packages.lua
+      hunspell
+      hunspellDicts.en_US
+      hunspellDicts.pt_BR
     ];
   };
 }

@@ -38,5 +38,7 @@
     confirm = true;
     updatetime = 250;
     timeoutlen = 300;
+    list = true;
+    listchars = "tab:» ,trail:·,nbsp:␣";
   };
 }

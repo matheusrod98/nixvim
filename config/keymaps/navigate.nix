@@ -2,7 +2,7 @@
   programs.nixvim.keymaps = [
     {
       mode = "n";
-      key = "[c";
+      key = "[C";
       action.__raw = ''function() require("treesitter-context").go_to_context(vim.v.count1) end'';
       options = {
         desc = "Go to context";

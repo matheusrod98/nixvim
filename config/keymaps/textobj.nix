@@ -27,19 +27,6 @@
       };
     };
 
-    repeatMove = key: method: desc: {
-      mode = [
-        "n"
-        "x"
-        "o"
-      ];
-      inherit key;
-      action.__raw = ''function() require("nvim-treesitter-textobjects.repeatable_move").${method}() end'';
-      options = {
-        inherit desc;
-        silent = true;
-      };
-    };
   in [
     (selectTextobject "af" "@function.outer" "Around function")
     (selectTextobject "if" "@function.inner" "Inside function")
@@ -67,7 +54,5 @@
     (moveTextobject "[o" "goto_previous_start" "@loop.outer" "Previous loop start")
     (moveTextobject "]d" "goto_next" "@conditional.outer" "Next conditional")
     (moveTextobject "[d" "goto_previous" "@conditional.outer" "Previous conditional")
-    (repeatMove ";" "repeat_last_move" "Repeat last Treesitter move")
-    (repeatMove "," "repeat_last_move_opposite" "Repeat last Treesitter move opposite")
   ];
 }

@@ -2,7 +2,9 @@
   imports = [
     ./keymaps/buffer.nix
     ./keymaps/clipboard.nix
+    ./keymaps/diff.nix
     ./keymaps/git.nix
+    ./keymaps/go.nix
     ./keymaps/lsp.nix
     ./keymaps/navigate.nix
     ./keymaps/oil.nix
@@ -12,6 +14,7 @@
     ./keymaps/select.nix
     ./keymaps/sidekick.nix
     ./keymaps/snacks.nix
+    ./keymaps/toggle.nix
     ./keymaps/tab.nix
     ./keymaps/textobj.nix
     ./keymaps/treesj.nix

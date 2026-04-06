@@ -10,7 +10,7 @@
       };
     }
     {
-      key = "<leader>cl";
+      key = "<leader>cy";
       action.__raw = "function() _G.copy_relative_path(true) end";
       mode = "n";
       options = {
