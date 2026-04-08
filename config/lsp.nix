@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  home.file.".config/codebook/codebook.toml".text = ''
+    dictionaries = ["en_us", "pt_br"]
+  '';
+
   programs.nixvim.extraPackages = with pkgs; [
     inotify-tools
   ];
@@ -103,6 +107,31 @@
           };
         };
         marksman.enable = true;
+        codebook = {
+          enable = true;
+          config = {
+            filetypes = [
+              "c"
+              "css"
+              "go"
+              "haskell"
+              "html"
+              "java"
+              "javascript"
+              "javascriptreact"
+              "lua"
+              "php"
+              "python"
+              "ruby"
+              "rust"
+              "swift"
+              "toml"
+              "typescript"
+              "typescriptreact"
+              "zig"
+            ];
+          };
+        };
         copilot.enable = true;
       };
     };
