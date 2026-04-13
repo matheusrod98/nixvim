@@ -28,6 +28,15 @@
     }
     {
       mode = "n";
+      key = "<leader>Tm";
+      action = "<cmd>RenderMarkdown toggle<cr>";
+      options = {
+        desc = "Toggle markdown render";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>trn";
       action.__raw = ''
         function()

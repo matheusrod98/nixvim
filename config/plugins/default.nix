@@ -10,6 +10,7 @@
     ./mini.nix
     ./oil.nix
     ./schemastore.nix
+    ./render-markdown.nix
     ./sidekick.nix
     ./sleuth.nix
     ./snacks.nix
