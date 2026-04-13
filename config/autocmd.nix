@@ -22,9 +22,11 @@
     {
       event = "FileType";
       pattern = [ "markdown" "text" "gitcommit" "rst" ];
-      desc = "Enable spell checking for prose filetypes";
+      desc = "Enable prose-friendly editing for text filetypes";
       callback.__raw = ''
         function()
+          vim.opt_local.wrap = true
+          vim.opt_local.linebreak = true
           vim.opt_local.spell = true
           vim.opt_local.spelllang = "en_us,pt_br"
         end

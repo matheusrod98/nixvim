@@ -15,19 +15,6 @@
     }
     {
       mode = "n";
-      key = "<leader>tw";
-      action.__raw = ''
-        function()
-          vim.opt_local.wrap = not vim.opt_local.wrap:get()
-        end
-      '';
-      options = {
-        desc = "Toggle wrap";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
       key = "<leader>Tm";
       action = "<cmd>RenderMarkdown toggle<cr>";
       options = {
