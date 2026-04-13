@@ -86,7 +86,7 @@ in {
     plugins.lz-n.plugins = [
       {
         __unkeyed-1 = "go.nvim";
-        ft = [ "go" "gomod" "gosum" "gowork" "gotmpl" ];
+        ft = ["go" "gomod" "gosum" "gowork" "gotmpl"];
         after.__raw = ''
           function()
             require("go").setup({

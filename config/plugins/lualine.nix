@@ -34,9 +34,9 @@
         globalstatus = true;
       };
       sections = {
-        lualine_a = [ "mode" ];
-        lualine_b = [ "branch" "diff" "diagnostics" ];
-        lualine_c = [ "filename" ];
+        lualine_a = ["mode"];
+        lualine_b = ["branch" "diff" "diagnostics"];
+        lualine_c = ["filename"];
         lualine_x = [
           "lsp_status"
           "encoding"
@@ -44,8 +44,8 @@
           "filetype"
           "overseer"
         ];
-        lualine_y = [ "nixvim_macro_recording()" "searchcount" "progress" ];
-        lualine_z = [ "nixvim_dap_lualine()" "location" ];
+        lualine_y = ["nixvim_macro_recording()" "searchcount" "progress"];
+        lualine_z = ["nixvim_dap_lualine()" "location"];
       };
     };
   };

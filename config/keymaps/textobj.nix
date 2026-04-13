@@ -26,7 +26,6 @@
         silent = true;
       };
     };
-
   in [
     (selectTextobject "af" "@function.outer" "Around function")
     (selectTextobject "if" "@function.inner" "Inside function")

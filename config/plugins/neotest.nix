@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.nixvim.plugins.neotest = {
     enable = true;
 
@@ -13,7 +13,7 @@
 
       playwright = {
         enable = true;
-        settings.options = { };
+        settings.options = {};
       };
 
       vitest = {

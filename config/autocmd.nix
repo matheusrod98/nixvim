@@ -21,7 +21,7 @@
     }
     {
       event = "FileType";
-      pattern = [ "markdown" "text" "gitcommit" "rst" ];
+      pattern = ["markdown" "text" "gitcommit" "rst"];
       desc = "Enable prose-friendly editing for text filetypes";
       callback.__raw = ''
         function()
