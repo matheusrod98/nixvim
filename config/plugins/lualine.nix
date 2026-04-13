@@ -37,9 +37,15 @@
         lualine_a = [ "mode" ];
         lualine_b = [ "branch" "diff" "diagnostics" ];
         lualine_c = [ "filename" ];
-        lualine_x = [ "lsp_status" "encoding" "fileformat" "filetype" ];
+        lualine_x = [
+          "lsp_status"
+          "encoding"
+          "fileformat"
+          "filetype"
+          "overseer"
+        ];
         lualine_y = [ "nixvim_macro_recording()" "searchcount" "progress" ];
-        lualine_z = [ "location" ];
+        lualine_z = [ "nixvim_dap_lualine()" "location" ];
       };
     };
   };

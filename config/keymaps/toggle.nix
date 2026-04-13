@@ -2,7 +2,7 @@
   programs.nixvim.keymaps = [
     {
       mode = "n";
-      key = "<leader>ts";
+      key = "<leader>Ts";
       action.__raw = ''
         function()
           vim.opt_local.spell = not vim.opt_local.spell:get()
@@ -15,16 +15,7 @@
     }
     {
       mode = "n";
-      key = "<leader>Tm";
-      action = "<cmd>RenderMarkdown toggle<cr>";
-      options = {
-        desc = "Toggle markdown render";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>trn";
+      key = "<leader>Trn";
       action.__raw = ''
         function()
           vim.opt_local.relativenumber = not vim.opt_local.relativenumber:get()
@@ -32,6 +23,15 @@
       '';
       options = {
         desc = "Toggle relative number";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>Tm";
+      action = "<cmd>RenderMarkdown toggle<cr>";
+      options = {
+        desc = "Toggle markdown render";
         silent = true;
       };
     }
