@@ -4,6 +4,16 @@
   '';
 
   programs.nixvim.extraPackages = with pkgs; [
+    basedpyright
+    bash-language-server
+    clang-tools
+    dockerfile-language-server
+    lua-language-server
+    marksman
+    nixd
+    sqls
+    taplo
+    vtsls
     inotify-tools
   ];
 
@@ -51,6 +61,11 @@
         yamlls = {
           enable = true;
           config = {
+            filetypes = [
+              "yaml"
+              "yaml.openapi"
+            ];
+
             yaml = {
               schemaStore = {
                 enable = false;
@@ -61,8 +76,15 @@
           };
         };
         nixd.enable = true;
+        basedpyright.enable = true;
+        bashls.enable = true;
+        clangd.enable = true;
         cssls.enable = true;
+        dockerls.enable = true;
         html.enable = true;
+        lua_ls.enable = true;
+        sqls.enable = true;
+        taplo.enable = true;
         vtsls.enable = true;
         tailwindcss.enable = true;
         gopls = {
