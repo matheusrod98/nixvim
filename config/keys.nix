@@ -2,12 +2,15 @@
   imports = [
     ./keymaps/buffer.nix
     ./keymaps/clipboard.nix
+    ./keymaps/dap.nix
     ./keymaps/diff.nix
     ./keymaps/git.nix
     ./keymaps/go.nix
+    ./keymaps/neotest.nix
     ./keymaps/lsp.nix
     ./keymaps/navigate.nix
     ./keymaps/oil.nix
+    ./keymaps/overseer.nix
     ./keymaps/qflist.nix
     ./keymaps/loclist.nix
     ./keymaps/search.nix

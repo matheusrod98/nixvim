@@ -4,13 +4,16 @@
     ./blink.nix
     ./builtin.nix
     ./context.nix
+    ./dap.nix
     ./go.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
+    ./neotest.nix
     ./oil.nix
-    ./schemastore.nix
+    ./overseer.nix
     ./render-markdown.nix
+    ./schemastore.nix
     ./sidekick.nix
     ./sleuth.nix
     ./snacks.nix
