@@ -64,7 +64,7 @@
       }
       {
         key = "<leader>=";
-        action.__raw = "function() vim.lsp.buf.format({ async = true }) end";
+        action.__raw = "function() require('conform').format({ async = true, lsp_format = 'fallback' }) end";
         options.desc = "Format buffer";
       }
       {

@@ -3,9 +3,11 @@
     ./abolish.nix
     ./blink.nix
     ./builtin.nix
+    ./conform.nix
     ./context.nix
     ./dap.nix
     ./go.nix
+    ./lint.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
