@@ -15,7 +15,6 @@
     ./keymaps/loclist.nix
     ./keymaps/search.nix
     ./keymaps/select.nix
-    ./keymaps/sidekick.nix
     ./keymaps/snacks.nix
     ./keymaps/toggle.nix
     ./keymaps/tab.nix
