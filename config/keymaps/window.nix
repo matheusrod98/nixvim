@@ -118,7 +118,7 @@
       };
     }
     {
-      key = "<leader>h";
+      key = "<leader>s";
       action = "<cmd>split<cr>";
       mode = "n";
       options = {

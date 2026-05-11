@@ -53,16 +53,6 @@
         options.desc = "[O]utgoing Calls";
       }
       {
-        key = "<leader>ss";
-        action.__raw = "function() Snacks.picker.lsp_symbols() end";
-        options.desc = "LSP Symbols";
-      }
-      {
-        key = "<leader>sS";
-        action.__raw = "function() Snacks.picker.lsp_workspace_symbols() end";
-        options.desc = "LSP Workspace Symbols";
-      }
-      {
         key = "<leader>=";
         action.__raw = "function() require('conform').format({ async = true, lsp_format = 'fallback' }) end";
         options.desc = "Format buffer";
