@@ -61,6 +61,7 @@
       picker.enabled = true;
       quickfile.enabled = true;
       statuscolumn.enabled = true;
+      gitbrowse.enabled = true;
     };
   };
 }
