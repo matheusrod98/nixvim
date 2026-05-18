@@ -12,6 +12,7 @@
       sqlfluff
       stylua
       yamlfmt
+      mdformat
     ];
 
     plugins.conform-nvim = {
@@ -25,7 +26,7 @@
           go = ["gofumpt"];
           json = ["prettier"];
           jsonc = ["prettier"];
-          markdown = ["markdownfmt"];
+          markdown = ["mdformat"];
           lua = ["stylua"];
           nix = ["nixfmt"];
           python = ["ruff_format"];
