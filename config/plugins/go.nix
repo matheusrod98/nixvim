@@ -58,6 +58,7 @@
 in {
   programs.nixvim = {
     extraPackages = with pkgs; [
+      richgo
       curl
       gnused
       gofumpt
