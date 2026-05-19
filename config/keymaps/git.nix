@@ -48,5 +48,14 @@
         silent = true;
       };
     }
+    {
+      mode = "n";
+      key = "<leader>gx";
+      action.__raw = ''function() Snacks.gitbrowse() end'';
+      options = {
+        desc = "Open repo on remote";
+        silent = true;
+      };
+    }
   ];
 }
