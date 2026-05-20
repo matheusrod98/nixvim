@@ -29,7 +29,7 @@
     {
       mode = "n";
       key = "<leader>Tm";
-      action = "<cmd>RenderMarkdown toggle<cr>";
+      action = "<cmd>MdRender toggle<cr>";
       options = {
         desc = "Toggle markdown render";
         silent = true;

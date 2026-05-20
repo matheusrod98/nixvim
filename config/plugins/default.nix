@@ -15,7 +15,7 @@
     ./neotest.nix
     ./oil.nix
     ./overseer.nix
-    ./render-markdown.nix
+    ./md-render.nix
     ./schemastore.nix
     ./sidekick.nix
     ./sleuth.nix
