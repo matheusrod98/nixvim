@@ -1,6 +1,7 @@
 {
   imports = [
     ./abolish.nix
+    ./auto-session.nix
     ./blink.nix
     ./builtin.nix
     ./conform.nix
