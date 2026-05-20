@@ -40,12 +40,6 @@
             action = ":lua Snacks.dashboard.pick('live_grep')";
           }
           {
-            icon = " ";
-            key = "s";
-            desc = "Restore Session";
-            section = "session";
-          }
-          {
             icon = " ";
             key = "q";
             desc = "Quit";
@@ -54,10 +48,6 @@
         ];
         sections = [
           {section = "header";}
-          {
-            section = "session";
-            padding = 1;
-          }
           {
             section = "keys";
             gap = 1;
