@@ -20,11 +20,7 @@ in {
     extraPlugins = [md-render];
 
     extraConfigLua = ''
-      require("snacks").setup({
-        picker = {
-          preview = require("md-render.snacks").preview(),
-        },
-      })
+      require("snacks").config.picker.preview = require("md-render.snacks").preview()
     '';
 
     autoCmd = [
