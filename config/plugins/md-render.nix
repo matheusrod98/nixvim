@@ -23,8 +23,14 @@ in {
       {
         event = "FileType";
         pattern = "markdown";
-        command = "silent! MdRender auto on";
-        desc = "Auto-enable md-render for markdown files";
+        callback.__raw = ''
+          function(args)
+            if vim.bo[args.buf].buftype == "" then
+              pcall(vim.cmd, "MdRender auto on")
+            end
+          end
+        '';
+        desc = "Auto-enable md-render for markdown files (real file buffers only)";
       }
     ];
   };
