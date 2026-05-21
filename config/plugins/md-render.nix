@@ -19,10 +19,6 @@ in {
 
     extraPlugins = [md-render];
 
-    extraConfigLua = ''
-      require("snacks").config.picker.preview = require("md-render.snacks").preview()
-    '';
-
     autoCmd = [
       {
         event = "FileType";
