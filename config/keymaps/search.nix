@@ -2,11 +2,32 @@
   programs.nixvim.keymaps = [
     {
       key = "<Esc>";
-      action = "<cmd>nohlsearch<cr>";
+      action.__raw = ''
+        function()
+          vim.cmd("nohlsearch")
+          require("sidekick.nes").clear()
+        end
+      '';
       mode = "n";
       options = {
-        desc = "Clear search highlight";
+        desc = "Clear search highlight and NES";
         silent = true;
+      };
+    }
+    {
+      key = "<Tab>";
+      action.__raw = ''
+        function()
+          if not require("sidekick").nes_jump_or_apply() then
+            return "<Tab>"
+          end
+        end
+      '';
+      mode = "n";
+      options = {
+        desc = "Accept/jump NES or fallback";
+        silent = true;
+        expr = true;
       };
     }
     {
