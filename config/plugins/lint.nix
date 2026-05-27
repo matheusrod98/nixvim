@@ -30,7 +30,9 @@
         go = ["golangcilint"];
         javascript = ["eslint"];
         javascriptreact = ["eslint"];
-        json = ["jsonlint"];
+        typescript = ["eslint"];
+        typescriptreact = ["eslint"];
+        json = ["eslint"];
         lua = ["luacheck"];
         make = ["checkmake"];
         markdown = ["markdownlint"];
@@ -39,8 +41,6 @@
         sh = ["shellcheck"];
         sql = ["sqlfluff"];
         toml = ["tombi"];
-        typescript = ["eslint"];
-        typescriptreact = ["eslint"];
         yaml = ["yamllint"];
         "yaml.openapi" = ["spectral"];
         zsh = ["shellcheck"];
