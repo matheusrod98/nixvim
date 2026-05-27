@@ -2,13 +2,13 @@
   programs.nixvim.keymaps = [
     {
       mode = "n";
-      key = "<Tab>";
+      key = "<Enter>";
       action = "van";
       options.desc = "Expand selection";
     }
     {
       mode = "x";
-      key = "<Tab>";
+      key = "<Enter>";
       action = "an";
       options.desc = "Expand selection";
     }
