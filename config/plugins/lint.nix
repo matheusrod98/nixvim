@@ -33,6 +33,7 @@
         typescript = ["eslint"];
         typescriptreact = ["eslint"];
         json = ["eslint"];
+        jsonc = ["eslint"];
         lua = ["luacheck"];
         make = ["checkmake"];
         markdown = ["markdownlint"];
