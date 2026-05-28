@@ -55,7 +55,10 @@
           }
         ];
       };
-      image.enabled = true;
+      image = {
+        enabled = true;
+        doc.enabled = false;
+      };
       lazygit.enabled = true;
       styles.lazygit.border = true;
       picker.enabled = true;
