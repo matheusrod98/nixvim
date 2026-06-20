@@ -22,20 +22,6 @@
       keymap = {
         "<Tab>" = [
           "snippet_forward"
-          {
-            __raw = ''
-              function()
-                return require("sidekick").nes_jump_or_apply()
-              end
-            '';
-          }
-          {
-            __raw = ''
-              function()
-                return vim.lsp.inline_completion.get()
-              end
-            '';
-          }
           "fallback"
         ];
       };

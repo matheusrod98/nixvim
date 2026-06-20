@@ -154,7 +154,6 @@
             ];
           };
         };
-        copilot.enable = true;
       };
     };
   };

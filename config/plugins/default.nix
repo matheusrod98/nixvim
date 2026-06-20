@@ -17,7 +17,6 @@
     ./overseer.nix
     ./md-render.nix
     ./schemastore.nix
-    ./sidekick.nix
     ./sleuth.nix
     ./snacks.nix
     ./textobj.nix
