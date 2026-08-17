@@ -1,12 +1,6 @@
-{pkgs, ...}: {
-  programs.nixvim.extraPlugins = with pkgs.vimPlugins; [
-    vague-nvim
-  ];
-
-  programs.nixvim.extraConfigLuaPre = ''
-    require("vague").setup({
-      transparent = true,
-    })
-    vim.cmd("colorscheme vague")
-  '';
+{
+  programs.nixvim.colorschemes.rose-pine = {
+    enable = true;
+    settings.variant = "main";
+  };
 }
