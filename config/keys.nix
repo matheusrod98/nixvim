@@ -22,5 +22,6 @@
     ./keymaps/treesj.nix
     ./keymaps/undotree.nix
     ./keymaps/window.nix
+    ./keymaps/zk.nix
   ];
 }

@@ -24,5 +24,6 @@
     ./treesitter.nix
     ./treesj.nix
     ./vtsls.nix
+    ./zk.nix
   ];
 }
